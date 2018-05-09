@@ -1,0 +1,44 @@
+.site-footer {
+  background-color: $color-primary;
+  color: $text-light;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include breakpoint(tab-port) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
+  }
+
+  &__text-content {
+    margin-bottom: 1rem;
+
+    @include breakpoint(tab-port) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__copyright {
+    font-weight: 500;
+  }
+
+  &__icons {
+    display: flex;
+    align-items: center;
+  }
+
+  &__link {
+    &:not(:last-child) {
+      margin-right: 2rem;
+    }
+
+    &:hover {
+      color: $color-accent;
+    }
+  }
+}

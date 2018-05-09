@@ -1,0 +1,70 @@
+.example {
+  display: flex;
+  flex-wrap: wrap;
+
+  @include breakpoint(tab-port) {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+
+  &--reverse {
+    flex-direction: row-reverse;
+  }
+
+  &__text-content {
+    flex-basis: 100%;
+    padding: 5rem 3rem;
+    text-align: center;
+
+    @include breakpoint(tab-port) {
+      flex-basis: 60%;
+      text-align: left;
+    }
+  }
+
+  &__title {
+    font-size: 3rem;
+    color: $color-primary-dark;
+
+    &:after {
+      display: block;
+      content: '';
+      width: 80px;
+      height: 3px;
+      background-color: $color-accent;
+      margin-top: 2rem;
+      margin-right: auto;
+      margin-left: auto;
+
+      @include breakpoint(tab-port) {
+        margin-right: 0;
+        margin-left: 0;
+      }
+    }
+  }
+
+  &__description {
+    color: $text-secondary;
+    margin-bottom: 3rem;
+  }
+
+  &__image-container {
+    flex-basis: 100%;
+    text-align: center;
+    width: 100%;
+
+    @include breakpoint(tab-port) {
+      flex-basis: 40%;
+    }
+  }
+
+  &__image {
+    max-width: 100%;
+    width: 300px;
+    height: auto;
+
+    @include breakpoint(tab-port) {
+      max-width: 250px;
+    }
+  }
+}

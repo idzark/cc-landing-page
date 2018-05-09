@@ -1,0 +1,52 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: $default-font-size;
+  color: $text-primary;
+}
+
+.heading-primary {
+
+  &--main {
+    display: block;
+    font-size: 4rem;
+    font-weight: 400;
+    color: $text-light;
+    margin-bottom: 1rem;
+
+    @include breakpoint(phone) {
+      font-size: 5rem;
+    }
+
+    @include breakpoint(tab-port) {
+      font-size: 6rem;
+    }
+  }
+
+  &--sub {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $color-primary-light;
+
+    @include breakpoint(phone) {
+      font-size: 2rem;
+    }
+
+    @include breakpoint(tab-port) {
+      font-size: 2.2rem;
+    }
+  }
+}
+
+.heading-secondary {
+  font-size: 3.5rem;
+  
+
+  &--white {
+    color: $text-light;
+  }
+
+  &--primary-dark {
+    color: $color-primary-dark;
+  }
+}

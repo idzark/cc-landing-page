@@ -1,0 +1,22 @@
+@mixin breakpoint($screenSize) {
+  @if $screenSize==phone {
+    @media only screen and (min-width: 28.5em) {
+      @content
+    };
+  }
+  @if $screenSize==tab-port {
+    @media only screen and (min-width: 56.25em) {
+      @content
+    };
+  }
+  @if $screenSize==tab-land {
+    @media only screen and (min-width: 75em) {
+      @content
+    };
+  }
+  @if $screenSize==big-desktop {
+    @media only screen and (min-width: 112.5em) {
+      @content
+    };
+  }
+}

@@ -1,0 +1,57 @@
+.slider {
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+
+  &__controls {
+    display: inline-block;
+  }
+  &__control {
+    background-color: $color-primary-light;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+
+    &--square {
+      width: 25px;
+      height: 8px;
+      border-radius: 2px;
+    }
+
+    &--round {
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
+    }
+
+    &:hover {
+      background-color: $color-accent;
+    }
+
+    &--testimonial-active,
+    &--screenshot-active {
+      background-color: $color-accent;
+    }
+
+    &:not(:last-child) {
+      margin-right: .5rem;
+    }
+  }
+
+  &__arrow {
+    font-size: 5rem;
+    color: $text-primary;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+    &--left {
+      left: 0;
+    }
+
+    &--right {
+      right: 0;
+    }
+  }
+}

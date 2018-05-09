@@ -1,0 +1,114 @@
+.nav-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  @include breakpoint(tab-port) {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+
+.navigation {
+  background-color: $color-primary-dark;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  width: 100%;
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99;
+
+  @include breakpoint(tab-port) {
+    background-color: transparent;
+    flex-direction: row;
+    align-items: center;
+  }
+
+  &--dark-bg {
+    background-color: $color-primary-dark;
+    box-shadow: 0 8px 6px -6px rgba(0, 0, 0, 0.5);
+  }
+
+  &__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__brand {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $text-light;
+  }
+
+  &__list {
+    display: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    @include breakpoint(tab-port) {
+      display: flex !important;
+      flex-direction: row !important;
+      align-items: center;
+    }
+
+    &--collapsed {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    padding-top: 3rem;
+    text-align: center;
+
+    @include breakpoint(tab-port) {
+      padding-top: 0;
+      text-align: left;
+
+      &:not(:last-child) {
+        margin-right: 3rem;
+      }
+    }
+    
+  }
+
+  &__link {
+    color: $text-light;
+    font-size: 1.6rem;
+
+    &:hover,
+    &--active {
+      color: $color-accent;
+    }
+
+    @include breakpoint(tab-port) {
+      font-size: 1.4rem;
+    }
+  }
+
+  &__toggle {
+    display: block;
+    cursor: pointer;
+
+    @include breakpoint(tab-port) {
+      display: none;
+    }
+
+    &-line {
+      display: block;
+      background-color: $text-light;
+      width: 30px;
+      height: 3px;
+      margin: 6px 0;
+    }
+  }
+}

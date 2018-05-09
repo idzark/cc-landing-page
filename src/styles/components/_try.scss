@@ -1,0 +1,10 @@
+.try {
+  max-width: 700px;
+  margin: 0 auto;
+  text-align: center;
+
+  &__description {
+    color: $color-primary-light;
+    margin-bottom: 4rem;
+  }
+}

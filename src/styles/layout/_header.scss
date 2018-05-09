@@ -1,0 +1,15 @@
+.site-header {
+  background-color: $color-primary;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpoint(phone) {
+    height: 80vh;
+  }
+
+  &__content {
+    text-align: center;
+  }
+}

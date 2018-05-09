@@ -1,0 +1,21 @@
+.button {
+  display: inline-block;
+  width: 130px;
+  padding: 12px 16px;
+  font-weight: 500;
+  border-radius: 2px;
+  text-align: center;
+
+  &--amber {
+    color: $text-light;
+    background-color: $color-accent;
+  }
+
+  &--try-now {
+    font-size: 1.8rem;
+  }
+}
+
+.button-testimonials {
+  text-align: center;
+}
